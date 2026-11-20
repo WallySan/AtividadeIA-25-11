@@ -86,20 +86,4 @@ Classificação supervisionada das espécies de pinguins (`Adelie`, `Chinstrap` 
 | Matriz de confusão e acurácia | 7 — avaliação no teste |
 | Predição do modelo implantado | 8 — `joblib` + nova observação |
 
-## Vídeo (até 5 minutos)
 
-Link do YouTube: **preencher após publicar**.
-
-Roteiro sugerido:
-
-- 00:00–00:40 — apresentação do projeto, dataset, objetivo e requisitos.
-- 00:40–01:20 — carga do CSV e estatísticas descritivas (`shape`, `describe`, classes).
-- 01:20–02:00 — transformações: coluna `proporcao_bico`, one-hot/scaling e limpeza de linhas.
-- 02:00–02:40 — divisão 60/20/20 estratificada e treinamento dos dois modelos.
-- 02:40–03:40 — matriz de confusão, acurácia de 100% no teste e predição do modelo implantado.
-- 03:40–04:20 — execução do `predict.py` no terminal.
-- 04:20–05:00 — resumo da esteira e link do repositório.
-
-## Entrega
-
-Prazo: 25/11/2026. Formulário: https://forms.gle/wRFct5kfubGnxffH7
