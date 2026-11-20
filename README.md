@@ -87,3 +87,24 @@ Classificação supervisionada das espécies de pinguins (`Adelie`, `Chinstrap` 
 | Predição do modelo implantado | 8 — `joblib` + nova observação |
 
 
+## Vídeo (até 5 minutos)
+
+- **Screencast sem narração (4:30):** [`video/palmer_penguins_sem_audio.mp4`](video/palmer_penguins_sem_audio.mp4) — gravação real do notebook Jupyter, 1920×1080, H.264, com faixa AAC silenciosa pronta para receber sua narração.
+- **Legenda com os tempos de fala:** [`video/legenda_video.txt`](video/legenda_video.txt).
+- Link do YouTube: **preencher após publicar**.
+
+Marcadores de cena:
+
+- 00:00–00:30 — apresentação do projeto, dataset e objetivo.
+- 00:30–01:10 — carga do CSV e estatísticas descritivas.
+- 01:10–01:50 — transformações em colunas e limpeza de linhas.
+- 01:50–02:30 — divisão 60/20/20 e treinamento dos modelos.
+- 02:30–03:20 — matriz de confusão, acurácia e modelo implantado.
+- 03:20–04:00 — execução do `predict.py` no terminal.
+- 04:00–04:30 — resumo da esteira.
+
+Para sobrepor a narração:
+
+```bash
+ffmpeg -i video/palmer_penguins_sem_audio.mp4 -i narracao.wav -c:v copy -c:a aac -shortest video/apresentacao_final.mp4
+```

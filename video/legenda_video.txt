@@ -1,0 +1,30 @@
+LEGENDA / ROTEIRO DE NARRAÇÃO — Vídeo Palmer Penguins (duração: 04:30)
+Use os trechos abaixo para gravar seu áudio. Os tempos correspondem às cenas do screencast.
+
+1
+00:00:00,000 --> 00:00:30,000
+Olá. Neste vídeo eu apresento a esteira de aprendizado de máquina que desenvolvi para classificar espécies de pinguins. A base é o Palmer Penguins, do Kaggle, com trezentos e quarenta e quatro registros e três classes: Adelie, Chinstrap e Gentoo. O objetivo é percorrer todas as etapas: preparação dos dados, transformações, divisão dos conjuntos, treinamento, avaliação e uma predição com o modelo já implantado.
+
+2
+00:00:30,000 --> 00:01:10,000
+Aqui carrego o arquivo penguins.csv, que está no repositório, com uma opção de download automático pela API pública do Kaggle. Em seguida, verifico o formato da base, os tipos de cada coluna, os valores ausentes e a distribuição das classes. O resumo estatístico mostra, por exemplo, média de comprimento do bico em torno de quarenta e três milímetros e massa corporal média de quatro mil duzentos gramas. Também ploto a quantidade de pinguins por espécie e a relação entre bico e nadadeira.
+
+3
+00:01:10,000 --> 00:01:50,000
+Na transformação das colunas, crio uma nova variável, a proporção entre comprimento e altura do bico. Ela resume a forma do bico e ajuda a separar as espécies. Depois, um ColumnTransformer padroniza as colunas numéricas e aplica one-hot nas colunas categóricas ilha e sexo. Nas linhas, removo registros com valores ausentes e duplicados. Dos trezentos e quarenta e quatro registros iniciais, restam trezentos e trinta e três para o treinamento.
+
+4
+00:01:50,000 --> 00:02:30,000
+Com a base limpa, faço a divisão estratificada em sessenta por cento para treino, vinte para validação e vinte para teste. São cento e noventa e nove, sessenta e sete e sessenta e sete registros, mantendo a proporção das três classes em cada parte. Treino dois modelos: regressão logística e floresta aleatória. Os dois chegam a cem por cento de acurácia na validação, e escolho a regressão logística por ser mais simples e rápida.
+
+5
+00:02:30,000 --> 00:03:20,000
+Depois de reajustar o modelo com treino mais validação, avalio uma única vez no conjunto de teste. A matriz de confusão não mostra erros: sessenta e sete acertos em sessenta e sete exemplos, com acurácia de cem por cento e F1 de um para todas as classes. Na etapa final, salvo o pipeline com joblib e carrego o arquivo do disco, simulando um modelo implantado. Para um novo pinguim da ilha Biscoe, o modelo prevê Gentoo com noventa e nove vírgula setenta e oito por cento de confiança.
+
+6
+00:03:20,000 --> 00:04:00,000
+Para mostrar a implantação de forma prática, executo também o script predict.py no terminal. Ele carrega o mesmo arquivo salvo pelo notebook e recebe as medidas do pinguim por argumentos. Na primeira execução, com os valores padrão, a resposta é Gentoo. Na segunda, com outras medidas da ilha Dream, a resposta é Chinstrap, com noventa por cento de confiança. Esse script acompanha o repositório e pode ser usado por qualquer pessoa.
+
+7
+00:04:00,000 --> 00:04:30,000
+Em resumo, a esteira cobre todos os requisitos: estatísticas descritivas, transformações em colunas e linhas, treino, validação e teste, matriz de confusão, acurácia e predição com modelo implantado. O notebook, os dados e o código estão no GitHub. Obrigado pela atenção.
