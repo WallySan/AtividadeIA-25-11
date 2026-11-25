@@ -73,3 +73,7 @@ Classificação supervisionada das espécies de pinguins (`Adelie`, `Chinstrap` 
 
    Observação: execute o notebook antes do `predict.py`, pois ele gera o arquivo do modelo.
 
+
+Video em
+
+https://youtu.be/JLVtNEC5sUs
